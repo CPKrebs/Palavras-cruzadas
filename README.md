@@ -1,8 +1,10 @@
 # Palavras-cruzadas
 
 Projeto de jogo de palavras cruzadas utilizando o Android Studio.
+
 Público alvo: crianças em fase de alfabetização, até 9 anos. 
 
+Temas variados, contendo 12 fases.
 
 ## Componentes
 
