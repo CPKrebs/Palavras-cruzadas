@@ -2,9 +2,11 @@
 
 Projeto de jogo de palavras cruzadas utilizando o Android Studio.
 
+Resolva a cruzadinha o mais rápido possivel, utilizando as letras em destaque para ganhar a pontuação máxima (1000 pontos). Temas variados, contendo 12 fases.
+
 Público alvo: crianças em fase de alfabetização, até 9 anos. 
 
-Temas variados, contendo 12 fases.
+
 
 ## Componentes
 
