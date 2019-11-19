@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Palavras cruzadas</string>
+    <string name="title_activity_tela__regras">Tela_Regras</string>
 </resources>

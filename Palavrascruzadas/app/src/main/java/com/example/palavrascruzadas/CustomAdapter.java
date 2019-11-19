@@ -45,19 +45,16 @@ public class CustomAdapter extends BaseAdapter {
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.lista, null, true);
 
-            holder.Id = (TextView) convertView.findViewById(R.id.txt1);
-            holder.Login = (TextView) convertView.findViewById(R.id.txt2);
-            holder.Email = (TextView) convertView.findViewById(R.id.txt3);
-            holder.Ponto = (TextView) convertView.findViewById(R.id.txt4);
+            holder.Login = (TextView) convertView.findViewById(R.id.txt1);
+            holder.Email = (TextView) convertView.findViewById(R.id.txt2);
+            holder.Ponto = (TextView) convertView.findViewById(R.id.txt3);
 
 
             convertView.setTag(holder);
         }else {
-            // the getTag returns the viewHolder object set as a tag to the view
             holder = (Holder)convertView.getTag();
         }
 
-        holder.Id.setText("Identificador: "+ArrayList.get(position).getUID());
         holder.Login.setText("Login: "+ArrayList.get(position).getLOGIN());
         holder.Email.setText("Email: "+ArrayList.get(position).getEMAIL());
         holder.Ponto.setText("Pontos: "+ArrayList.get(position).getPONTO());
@@ -68,6 +65,6 @@ public class CustomAdapter extends BaseAdapter {
 
     public class Holder {
 
-        TextView Id, Login, Email, Ponto;
+        TextView Login, Email, Ponto;
     }
 }

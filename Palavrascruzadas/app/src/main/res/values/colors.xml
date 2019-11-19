@@ -5,5 +5,7 @@
     <color name="colorAccent">#D81B60</color>
     <color name="Celulas">#2196F3</color>
     <color name="Preto">#000000</color>
+    <color name="Amarelo">#FFEB3B</color>
+    <color name="Laranja">#FFA500</color>
     <color name="CorMenu">#0BD7AB</color>
 </resources>

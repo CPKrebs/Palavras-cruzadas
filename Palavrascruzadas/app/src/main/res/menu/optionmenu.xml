@@ -3,6 +3,9 @@
     <item android:id="@+id/itemExcluir"
         android:title="Excluir Conta" />
 
+    <item android:id="@+id/itemRegras"
+        android:title="Regras" />
+
     <item android:id="@+id/itemSAIR"
         android:title="SAIR" />
 

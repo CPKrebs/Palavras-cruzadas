@@ -36,14 +36,22 @@ public class Tela_Cadastro extends AppCompatActivity {
                 String t2 = edtEmail.getText().toString();
                 String t3 = edtSenha.getText().toString();
                 String t4 = edtSenha2.getText().toString();
-                if(t1.isEmpty() || t2.isEmpty() || t3.isEmpty() || t4.isEmpty()) {
-                    new AlertDialog.Builder(Tela_Cadastro.this).setTitle("Algum campo está vazio!").setMessage("").show();
-                } else if( t3.equals(t4)) {
 
+                t1 = t1.replaceAll(" ","");
+                t2 = t2.replaceAll(" ","");
+                t3 = t3.replaceAll(" ","");
+                t4 = t4.replaceAll(" ","");
+
+                if(t1.isEmpty() || t2.isEmpty() || t3.isEmpty() || t4.isEmpty()) {
+                    new AlertDialog.Builder(Tela_Cadastro.this).setTitle("Algum campo está vazio!")
+                            .setMessage("").show();
+                } else if( t3.equals(t4)) {
                     if(helper.LoginExist(t1)){
-                        new AlertDialog.Builder(Tela_Cadastro.this).setTitle("Usuario já cadastrado!");
+                        new AlertDialog.Builder(Tela_Cadastro.this).setTitle("Usuario já cadastrado!")
+                                .setMessage("").show();
                     } else if(helper.EmailExist(t2)){
-                        new AlertDialog.Builder(Tela_Cadastro.this).setTitle("Email já cadastrado!");
+                        new AlertDialog.Builder(Tela_Cadastro.this).setTitle("Email já cadastrado!")
+                                .setMessage("").show();
                     } else {
                         helper.insertData(t1, t2, t3);
                         new AlertDialog.Builder(Tela_Cadastro.this).setTitle("Usuario cadastrado com sucesso!")
@@ -51,9 +59,9 @@ public class Tela_Cadastro extends AppCompatActivity {
                         Intent it = new Intent(Tela_Cadastro.this, MainActivity.class);
                         startActivity(it);
                     }
-
                 } else {
-                    new AlertDialog.Builder(Tela_Cadastro.this).setTitle("Senhas diferentes!").setMessage("").show();
+                    new AlertDialog.Builder(Tela_Cadastro.this).setTitle("Senhas diferentes!")
+                            .setMessage("").show();
                 }
             }
         });

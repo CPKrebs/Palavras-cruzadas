@@ -27,14 +27,15 @@ public class MainActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnLogin);
         btnCadastrar = findViewById(R.id.btnCadastrar);
 
-
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-
                 String t1 = edtLogin.getText().toString();
                 String t2 = edtSenha.getText().toString();
+
+                t1 = t1.replaceAll(" ","");
+                t2 = t2.replaceAll(" ","");
 
                 if(t1.isEmpty() || t2.isEmpty()) {
                     new AlertDialog.Builder(MainActivity.this).setTitle("Algum campo está vazio!").setMessage("").show();
@@ -45,16 +46,6 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     new AlertDialog.Builder(MainActivity.this).setTitle("Usuario ou Senha incorretos").setMessage("").show();
                 }
-
-/*
-                Intent it = new Intent(MainActivity.this, Tela_Menu.class);
-                it.putExtra("Login", t1);
-                startActivity(it);
-
- */
-
-
-
             }
         });
 
@@ -65,6 +56,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(it);
             }
         });
-
     }
 }

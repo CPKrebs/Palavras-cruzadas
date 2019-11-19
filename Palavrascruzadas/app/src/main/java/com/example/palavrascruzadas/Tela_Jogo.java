@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.SystemClock;
@@ -41,9 +42,7 @@ public class Tela_Jogo extends AppCompatActivity {
 
     private String L1, L2, L3, L4, L5, L6, L7, L8, L9, L10, L11, L12;
 
-
     BD_Class helper = new BD_Class(this);
-
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
@@ -52,6 +51,10 @@ public class Tela_Jogo extends AppCompatActivity {
         setContentView(R.layout.activity_tela__jogo);
 
         INICIALIZA();
+
+        MediaPlayer mediaPlayer = MediaPlayer.create(Tela_Jogo.this, R.raw.music1);
+        mediaPlayer.setLooping(true);
+        mediaPlayer.start();
 
         Crono.start();
         Crono.setFormat("Tempo - %s");
@@ -198,7 +201,7 @@ public class Tela_Jogo extends AppCompatActivity {
                             edt55.setText("O");
                             edtPalavra.setText("");
                             ACERTO = ACERTO + 1;
-                            if(ACERTO == 1){
+                            if(ACERTO == 4){
                                 CALULO_PONTO(LEVEL_AUX);
                             }
                         }
@@ -216,8 +219,8 @@ public class Tela_Jogo extends AppCompatActivity {
                         edtPalavra.setText(edtPalavra.getText().toString() + L12);
                 }
                 });
-
                 break;
+
             case 2:
                 edtTema.setText("Brinquedos");
 
@@ -376,9 +379,8 @@ public class Tela_Jogo extends AppCompatActivity {
                         edtPalavra.setText(edtPalavra.getText().toString() + L12);
                     }
                 });
-
-
                 break;
+
             case 3:
                 edtTema.setText("Carros");
 
@@ -541,7 +543,6 @@ public class Tela_Jogo extends AppCompatActivity {
                         }
                     }
                 });
-
                 break;
 
             case 4:
@@ -696,9 +697,7 @@ public class Tela_Jogo extends AppCompatActivity {
                         }
                     }
                 });
-
                 break;
-
 
             case 5:
                 edtTema.setText("Comida");
@@ -864,10 +863,1127 @@ public class Tela_Jogo extends AppCompatActivity {
                         }
                     }
                 });
-
                 break;
 
+            case 6:
+                edtTema.setText("Profissões");
 
+                LEVEL_AUX = 6;
+
+                SET_MAP( 0, 0,  0,  0,  0,  0,  0,  0,  1,
+                        1, 1, 0, 1, 1, 1, 1, 1, 1,
+                        1, 0, 0, 0, 0, 0, 0, 0, 0,
+                        1, 1, 0, 1, 1, 1, 1, 1, 1,
+                        0, 0, 0, 0, 0, 0, 0, 0, 1,
+                        1, 1, 0, 1, 1, 1, 1, 1, 1 );
+
+                L1 = "V";  L2 = "O";  L3 = "C";  L4 = "B";
+                L5 = "D";  L6 = "I";  L7 = "R";  L8 = "N";
+                L9 = "G"; L10 = "A"; L11 = "E"; L12 = "M";
+
+                SET_LETRA( );
+
+                btn1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L1);
+                    }
+                });
+                btn2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L2);
+                        if(edtPalavra.getText().toString().equals("BOMBEIRO")){
+                            edt1.setText("B");
+                            edt2.setText("O");
+                            edt3.setText("M");
+                            edt4.setText("B");
+                            edt5.setText("E");
+                            edt6.setText("I");
+                            edt7.setText("R");
+                            edt8.setText("O");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 4){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                        if(edtPalavra.getText().toString().equals("ADVOGADO")){
+                            edt32.setText("A");
+                            edt33.setText("D");
+                            edt34.setText("V");
+                            edt35.setText("O");
+                            edt36.setText("G");
+                            edt37.setText("A");
+                            edt38.setText("D");
+                            edt39.setText("O");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 4){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                        if(edtPalavra.getText().toString().equals("MECANICO")){
+                            edt51.setText("M");
+                            edt52.setText("E");
+                            edt53.setText("C");
+                            edt54.setText("A");
+                            edt55.setText("N");
+                            edt56.setText("I");
+                            edt57.setText("C");
+                            edt58.setText("O");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 4){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                        if(edtPalavra.getText().toString().equals("MEDICO")){
+                            edt3.setText("M");
+                            edt23.setText("E");
+                            edt33.setText("D");
+                            edt43.setText("I");
+                            edt53.setText("C");
+                            edt63.setText("O");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 4){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                    }
+                });
+                btn3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L3);
+                    }
+                });
+                btn4.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L4);
+                    }
+                });
+                btn21.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L5);
+                    }
+                });
+                btn22.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L6);
+                    }
+                });
+                btn23.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L7);
+                    }
+                });
+                btn24.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L8);
+                    }
+                });
+                btn31.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L9);
+                    }
+                });
+                btn32.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L10);
+                    }
+                });
+                btn33.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L11);
+                    }
+                });
+                btn34.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L12);
+                    }
+                });
+                break;
+
+            case 7:
+                edtTema.setText("Frutas");
+                LEVEL_AUX = 7;
+
+                SET_MAP( 1, 1,  1,  1,  0,  1,  1,  1,  1,
+                        0, 0, 0, 0, 0, 0, 0, 1, 1,
+                        1, 1, 1, 1, 0, 1, 1, 1, 1,
+                        0, 0, 0, 0, 0, 0, 0, 1, 1,
+                        0, 0, 0, 0, 0, 0, 0, 1, 1,
+                        1, 1, 1, 0, 0, 0, 0, 0, 1 );
+
+                L1 = "X";  L2 = "A";  L3 = "R";  L4 = "T";
+                L5 = "N";  L6 = "E";  L7 = "I";  L8 = "M";
+                L9 = "B"; L10 = "O"; L11 = "G"; L12 = "C";
+
+                SET_LETRA( );
+
+                btn1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L1);
+                    }
+                });
+                btn2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L2);
+                        if(edtPalavra.getText().toString().equals("BANANA")){
+                            edt5.setText("B");
+                            edt25.setText("A");
+                            edt35.setText("N");
+                            edt45.setText("A");
+                            edt55.setText("N");
+                            edt65.setText("A");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 5){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                        if(edtPalavra.getText().toString().equals("MANGA")){
+                            edt64.setText("M");
+                            edt65.setText("A");
+                            edt66.setText("N");
+                            edt67.setText("G");
+                            edt68.setText("A");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 5){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                    }
+                });
+                btn3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L3);
+                    }
+                });
+                btn4.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L4);
+                    }
+                });
+                btn21.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L5);
+                    }
+                });
+                btn22.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L6);
+                        if(edtPalavra.getText().toString().equals("ABACATE")){
+                            edt21.setText("A");
+                            edt22.setText("B");
+                            edt23.setText("A");
+                            edt24.setText("C");
+                            edt25.setText("A");
+                            edt26.setText("T");
+                            edt27.setText("E");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 5){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                    }
+                });
+                btn23.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L7);
+                        if(edtPalavra.getText().toString().equals("ABACAXI")){
+                            edt41.setText("A");
+                            edt42.setText("B");
+                            edt43.setText("A");
+                            edt44.setText("C");
+                            edt45.setText("A");
+                            edt46.setText("X");
+                            edt47.setText("I");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 5){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                    }
+                });
+                btn24.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L8);
+                    }
+                });
+                btn31.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L9);
+                    }
+                });
+                btn32.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L10);
+                        if(edtPalavra.getText().toString().equals("MORANGO")){
+                            edt51.setText("M");
+                            edt52.setText("O");
+                            edt53.setText("R");
+                            edt54.setText("A");
+                            edt55.setText("N");
+                            edt56.setText("G");
+                            edt57.setText("O");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 5){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                    }
+                });
+                btn33.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L11);
+                    }
+                });
+                btn34.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L12);
+                    }
+                });
+                break;
+
+            case 8:
+                edtTema.setText("Animais de circo");
+                LEVEL_AUX = 8;
+
+                SET_MAP( 0,  0,  0, 0,  0,  0,  1,  1,  1,
+                        1, 1, 0, 1, 1, 1, 1, 0, 1,
+                        0, 0, 0, 0, 0, 0, 0, 0, 1,
+                        1, 1, 0, 1, 1, 1, 1, 0, 1,
+                        1, 1, 0, 1, 1, 1, 1, 0, 1,
+                        1, 0, 0, 0, 0, 0, 1, 1, 1 );
+
+                L1 = "B";  L2 = "T";  L3 = "O";  L4 = "H";
+                L5 = "M";  L6 = "F";  L7 = "C";  L8 = "A";
+                L9 = "L"; L10 = "P"; L11 = "N"; L12 = "E";
+
+                SET_LETRA( );
+
+                btn1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L1);
+                    }
+                });
+                btn2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L2);
+                    }
+                });
+                btn3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L3);
+                        if(edtPalavra.getText().toString().equals("MACACO")){
+                            edt1.setText("M");
+                            edt2.setText("A");
+                            edt3.setText("C");
+                            edt4.setText("A");
+                            edt5.setText("C");
+                            edt6.setText("O");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 5){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                        if(edtPalavra.getText().toString().equals("COELHO")){
+                            edt3.setText("C");
+                            edt23.setText("O");
+                            edt33.setText("E");
+                            edt43.setText("L");
+                            edt53.setText("H");
+                            edt63.setText("O");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 5){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                    }
+                });
+                btn4.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L4);
+                    }
+                });
+                btn21.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L5);
+                    }
+                });
+                btn22.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L6);
+                    }
+                });
+                btn23.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L7);
+                    }
+                });
+                btn24.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L8);
+                        if(edtPalavra.getText().toString().equals("POMBA")){
+                            edt62.setText("P");
+                            edt63.setText("O");
+                            edt64.setText("M");
+                            edt65.setText("B");
+                            edt66.setText("A");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 5){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                        if(edtPalavra.getText().toString().equals("LEOA")){
+                            edt28.setText("L");
+                            edt38.setText("E");
+                            edt48.setText("O");
+                            edt58.setText("A");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 5){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                    }
+                });
+                btn31.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L9);
+                    }
+                });
+                btn32.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L10);
+                    }
+                });
+                btn33.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L11);
+                    }
+                });
+                btn34.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L12);
+                        if(edtPalavra.getText().toString().equals("ELEFANTE")){
+                            edt31.setText("E");
+                            edt32.setText("L");
+                            edt33.setText("E");
+                            edt34.setText("F");
+                            edt35.setText("A");
+                            edt36.setText("N");
+                            edt37.setText("T");
+                            edt38.setText("E");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 5){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                    }
+                });
+                break;
+
+            case 9:
+                edtTema.setText("Familia");
+                LEVEL_AUX = 9;
+
+                SET_MAP( 1, 0,  1,  0,  1,  1,  1,  1,  1,
+                        0, 0, 0, 0, 0, 0, 0, 1, 1,
+                        1, 0, 1, 0, 1, 1, 0, 1, 1,
+                        1, 0, 1, 0, 1, 1, 0, 1, 1,
+                        1, 1, 1, 0, 1, 1, 0, 1, 1,
+                        0, 0, 0, 0, 1, 1, 1, 1, 1 );
+
+                L1 = "X";  L2 = "S";  L3 = "F";  L4 = "O";
+                L5 = "L";  L6 = "P";  L7 = "M";  L8 = "H";
+                L9 = "C"; L10 = "R"; L11 = "I"; L12 = "A";
+
+                SET_LETRA( );
+
+                btn1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L1);
+                    }
+                });
+                btn2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L2);
+                        if(edtPalavra.getText().toString().equals("PAIS")){
+                            edt61.setText("P");
+                            edt62.setText("A");
+                            edt63.setText("I");
+                            edt64.setText("S");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 5){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                        if(edtPalavra.getText().toString().equals("FILHOS")){
+                            edt4.setText("F");
+                            edt24.setText("I");
+                            edt34.setText("L");
+                            edt44.setText("H");
+                            edt54.setText("O");
+                            edt64.setText("S");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 5){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+
+                    }
+                });
+                btn3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L3);
+                    }
+                });
+                btn4.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L4);
+                    }
+                });
+                btn21.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L5);
+                    }
+                });
+                btn22.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L6);
+                    }
+                });
+                btn23.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L7);
+                    }
+                });
+                btn24.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L8);
+                    }
+                });
+                btn31.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L9);
+                    }
+                });
+                btn32.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L10);
+                        if(edtPalavra.getText().toString().equals("AMOR")){
+                            edt27.setText("A");
+                            edt37.setText("M");
+                            edt47.setText("O");
+                            edt57.setText("R");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 5){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                    }
+                });
+                btn33.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L11);
+                    }
+                });
+                btn34.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L12);
+                        if(edtPalavra.getText().toString().equals("FAMILIA")){
+                            edt21.setText("F");
+                            edt22.setText("A");
+                            edt23.setText("M");
+                            edt24.setText("I");
+                            edt25.setText("L");
+                            edt26.setText("I");
+                            edt27.setText("A");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 5){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                        if(edtPalavra.getText().toString().equals("CASA")){
+                            edt2.setText("C");
+                            edt22.setText("A");
+                            edt32.setText("S");
+                            edt42.setText("A");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 5){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                    }
+
+                });
+                break;
+
+            case 10:
+                edtTema.setText("Praia");
+                LEVEL_AUX = 10;
+
+                SET_MAP( 1, 1,  1,  1,  0,  0,  0,  1,  1,
+                        0, 0, 0, 0, 0, 1, 1, 1, 1,
+                        1, 1, 0, 1, 0, 1, 1, 1, 1,
+                        1, 1, 0, 0, 0, 0, 0, 0, 0,
+                        0, 0, 0, 0, 1, 1, 1, 1, 1,
+                        1, 0, 0, 0, 1, 1, 1, 1, 1 );
+
+                L1 = "O";  L2 = "Ô";  L3 = "T";  L4 = "P";
+                L5 = "I";  L6 = "M";  L7 = "S";  L8 = "R";
+                L9 = "X"; L10 = "L"; L11 = "A"; L12 = "E";
+
+                SET_LETRA( );
+
+                btn1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L1);
+                    }
+                });
+                btn2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L2);
+                        if(edtPalavra.getText().toString().equals("MAIÔ")){
+                            edt51.setText("M");
+                            edt52.setText("A");
+                            edt53.setText("I");
+                            edt54.setText("Ô");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 7){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                    }
+                });
+                btn3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L3);
+                    }
+                });
+                btn4.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L4);
+                    }
+                });
+                btn21.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L5);
+                    }
+                });
+                btn22.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L6);
+                    }
+                });
+                btn23.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L7);
+                    }
+                });
+                btn24.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L8);
+                        if(edtPalavra.getText().toString().equals("MAR")){
+                            edt62.setText("M");
+                            edt63.setText("A");
+                            edt64.setText("R");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 7){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                    }
+                });
+                btn31.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L9);
+                    }
+                });
+                btn32.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L10);
+                        if(edtPalavra.getText().toString().equals("SOL")){
+                            edt5.setText("S");
+                            edt6.setText("O");
+                            edt7.setText("L");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 7){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                        if(edtPalavra.getText().toString().equals("SAL")){
+                            edt5.setText("S");
+                            edt25.setText("A");
+                            edt35.setText("L");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 7){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                    }
+                });
+                btn33.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L11);
+                        if(edtPalavra.getText().toString().equals("ESTRELA")){
+                            edt43.setText("E");
+                            edt44.setText("S");
+                            edt45.setText("T");
+                            edt46.setText("R");
+                            edt47.setText("E");
+                            edt48.setText("L");
+                            edt49.setText("A");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 7){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                        if(edtPalavra.getText().toString().equals("PRAIA")){
+                            edt21.setText("P");
+                            edt22.setText("R");
+                            edt23.setText("A");
+                            edt24.setText("I");
+                            edt25.setText("A");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 7){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                        if(edtPalavra.getText().toString().equals("AREIA")){
+                            edt23.setText("A");
+                            edt33.setText("R");
+                            edt43.setText("E");
+                            edt53.setText("I");
+                            edt63.setText("A");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 7){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                    }
+                });
+                btn34.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L12);
+                    }
+                });
+                break;
+
+            case 11:
+                edtTema.setText("Palavras com \"B\" ");
+                LEVEL_AUX = 11;
+
+                SET_MAP( 1, 1,  0,  1,  1,  0,  1,  0,  1,
+                        1, 1, 0, 1, 1, 0, 1, 0, 1,
+                        0, 0, 0, 0, 0, 0, 0, 0, 0,
+                        0, 1, 0, 1, 1, 0, 1, 0, 1,
+                        0, 1, 0, 1, 1, 0, 1, 0, 1,
+                        0, 1, 1, 0, 0, 0, 0, 0, 1 );
+
+                L1 = "B";  L2 = "T";  L3 = "S";  L4 = "E";
+                L5 = "O";  L6 = "C";  L7 = "A";  L8 = "R";
+                L9 = "X"; L10 = "Y"; L11 = "L"; L12 = "I";
+
+                SET_LETRA( );
+
+                btn1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L1);
+                    }
+                });
+                btn2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L2);
+                    }
+                });
+                btn3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L3);
+                    }
+                });
+                btn4.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L4);
+                    }
+                });
+                btn21.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L5);
+                        if(edtPalavra.getText().toString().equals("BOLO")){
+                            edt31.setText("B");
+                            edt41.setText("O");
+                            edt51.setText("L");
+                            edt61.setText("O");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 6){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                        if(edtPalavra.getText().toString().equals("BARCO")){
+                            edt3.setText("B");
+                            edt23.setText("A");
+                            edt33.setText("R");
+                            edt43.setText("C");
+                            edt53.setText("O");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 6){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                    }
+                });
+                btn22.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L6);
+                    }
+                });
+                btn23.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L7);
+                        if(edtPalavra.getText().toString().equals("BALEIA")){
+                            edt6.setText("B");
+                            edt26.setText("A");
+                            edt36.setText("L");
+                            edt46.setText("E");
+                            edt56.setText("I");
+                            edt66.setText("A");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 6){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                        if(edtPalavra.getText().toString().equals("BATATA")){
+                            edt8.setText("B");
+                            edt28.setText("A");
+                            edt38.setText("T");
+                            edt48.setText("A");
+                            edt58.setText("T");
+                            edt68.setText("A");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 6){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                        if(edtPalavra.getText().toString().equals("BORBOLETA")){
+                            edt31.setText("B");
+                            edt32.setText("O");
+                            edt33.setText("R");
+                            edt34.setText("B");
+                            edt35.setText("O");
+                            edt36.setText("L");
+                            edt37.setText("E");
+                            edt38.setText("T");
+                            edt39.setText("A");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 6){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                        if(edtPalavra.getText().toString().equals("BRASA")){
+                            edt64.setText("B");
+                            edt65.setText("R");
+                            edt66.setText("A");
+                            edt67.setText("S");
+                            edt68.setText("A");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 6){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                    }
+                });
+                btn24.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L8);
+                    }
+                });
+                btn31.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L9);
+                    }
+                });
+                btn32.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L10);
+                    }
+                });
+                btn33.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L11);
+                    }
+                });
+                btn34.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L12);
+                    }
+                });
+                break;
+
+            case 12:
+                edtTema.setText("Meios de Transporte");
+                LEVEL_AUX = 12;
+
+                SET_MAP( 0, 0,  0,  0,  0,  1,  0,  1,  1,
+                        1, 0, 1, 1, 1, 1, 0, 1, 0,
+                        0, 0, 0, 0, 0, 0, 0, 0, 0,
+                        1, 0, 1, 1, 1, 1, 0, 1, 0,
+                        1, 0, 1, 1, 1, 1, 1, 1, 0,
+                        1, 1, 1, 1, 0, 0, 0, 0, 0 );
+
+                L1 = "A";  L2 = "Ã";  L3 = "M";  L4 = "R";
+                L5 = "T";  L6 = "O";  L7 = "I";  L8 = "L";
+                L9 = "B"; L10 = "C"; L11 = "V"; L12 = "E";
+
+                SET_LETRA( );
+
+                btn1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L1);
+                        if(edtPalavra.getText().toString().equals("BICICLETA")){
+                            edt31.setText("B");
+                            edt32.setText("I");
+                            edt33.setText("C");
+                            edt34.setText("I");
+                            edt35.setText("C");
+                            edt36.setText("L");
+                            edt37.setText("E");
+                            edt38.setText("T");
+                            edt39.setText("A");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 6){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                    }
+                });
+                btn2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L2);
+                    }
+                });
+                btn3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L3);
+                        if(edtPalavra.getText().toString().equals("TREM")){
+                            edt7.setText("T");
+                            edt27.setText("R");
+                            edt37.setText("E");
+                            edt47.setText("M");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 6){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                    }
+                });
+                btn4.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L4);
+                    }
+                });
+                btn21.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L5);
+                    }
+                });
+                btn22.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L6);
+                        if(edtPalavra.getText().toString().equals("BARCO")){
+                            edt1.setText("B");
+                            edt2.setText("A");
+                            edt3.setText("R");
+                            edt4.setText("C");
+                            edt5.setText("O");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 6){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                        if(edtPalavra.getText().toString().equals("BALÃO")){
+                            edt65.setText("B");
+                            edt66.setText("A");
+                            edt67.setText("L");
+                            edt68.setText("Ã");
+                            edt69.setText("O");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 6){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                        if(edtPalavra.getText().toString().equals("AVIÃO")){
+                            edt2.setText("A");
+                            edt22.setText("V");
+                            edt32.setText("I");
+                            edt42.setText("Ã");
+                            edt52.setText("O");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 6){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                        if(edtPalavra.getText().toString().equals("CARRO")){
+                            edt29.setText("C");
+                            edt39.setText("A");
+                            edt49.setText("R");
+                            edt59.setText("R");
+                            edt69.setText("O");
+                            edtPalavra.setText("");
+                            ACERTO = ACERTO + 1;
+                            if(ACERTO == 6){
+                                CALULO_PONTO(LEVEL_AUX);
+                            }
+                        }
+                    }
+                });
+                btn23.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L7);
+                    }
+                });
+                btn24.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L8);
+                    }
+                });
+                btn31.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L9);
+                    }
+                });
+                btn32.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L10);
+                    }
+                });
+                btn33.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L11);
+                    }
+                });
+                btn34.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edtPalavra.setText(edtPalavra.getText().toString() + L12);
+                    }
+                });
+                break;
 
             default:
                 edtTema.setText("EM DESENVOLVIMENTO");
@@ -958,7 +2074,6 @@ public class Tela_Jogo extends AppCompatActivity {
                         edtPalavra.setText(edtPalavra.getText().toString() + L12);
                     }
                 });
-
                 break;
         }
     }
@@ -996,15 +2111,12 @@ public class Tela_Jogo extends AppCompatActivity {
         helper.UpPonto( Login, PONTO_aux, Level-1);
         MSG_FINAL(PONTO_aux);
     }
-
     private void SET_LETRA( ){
 
         btn1.setText(L1);   btn2.setText(L2);   btn3.setText(L3);   btn4.setText(L4);
         btn21.setText(L5);  btn22.setText(L6);  btn23.setText(L7);  btn24.setText(L8);
         btn31.setText(L9);  btn32.setText(L10); btn33.setText(L11); btn34.setText(L12);
-
     }
-
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     private void SET_MAP( int B1,  int B2,  int B3,  int B4,  int B5,  int B6,  int B7,  int B8,  int B9,
                           int B21, int B22, int B23, int B24, int B25, int B26, int B27, int B28, int B29,
@@ -1075,9 +2187,7 @@ public class Tela_Jogo extends AppCompatActivity {
         if( B49 == 1 ) edt49.setBackground(view.getBackground());
         if( B59 == 1 ) edt59.setBackground(view.getBackground());
         if( B69 == 1 ) edt69.setBackground(view.getBackground());
-
     }
-
     private void INICIALIZA( ) {
 
         edt1 = findViewById(R.id.edt1);

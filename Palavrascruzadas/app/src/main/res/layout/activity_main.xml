@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -28,7 +27,7 @@
             android:layout_marginTop="10dp"
             android:layout_gravity="center"
             android:ems="10"
-            android:hint="Login" />
+            android:hint="Usuário" />
 
         <EditText
             android:id="@+id/edtSenha"
@@ -38,6 +37,7 @@
             android:layout_marginTop="10dp"
             android:layout_gravity="center"
             android:ems="10"
+            android:inputType="textPassword"
             android:hint="Senha" />
 
         <LinearLayout
@@ -61,11 +61,6 @@
 
         </LinearLayout>
 
-
     </LinearLayout>
-
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -61,8 +61,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:textColor="@color/Preto"/>
-
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -91,7 +91,66 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:textColor="@color/Preto"/>
+                </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/Level7"
+                        android:text="Level 7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/Preto"/>
+                    <Button
+                        android:id="@+id/Level8"
+                        android:text="Level 8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/Preto"/>
+                    <Button
+                        android:id="@+id/Level9"
+                        android:text="Level 9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/Preto"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/Level10"
+                        android:text="Level 10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/Preto"/>
+                    <Button
+                        android:id="@+id/Level11"
+                        android:text="Level 11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/Preto"/>
+                    <Button
+                        android:id="@+id/Level12"
+                        android:text="Level 12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/Preto"/>
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>
