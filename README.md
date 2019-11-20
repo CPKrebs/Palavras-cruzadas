@@ -22,10 +22,7 @@ A seguir um resumo das Classes e Layout mais importantes para o projeto.
 ### Classes Java
 
 * MainActivity: Responsável por realizar o login.
-* Tela_Menu: Permite que o usúario escolha a fase, e exclua a sua conta. 
+* Tela_Menu: Permite que o usúario escolha a fase, verifica através da cor do level qual potuanção atingiu, e exclua a sua conta. Também é responsável por iniciar a música.
 * Tela_Jogo: Gerencia quais palavras serão usadas na fase, calcula a pontuação obtida e atualiza o banco de dados.
 * Tela_Cadastro: Permite que inclua um novo usuário no banco de dados, verificando se as informações estão certas e que não existam usuários repetidos.
 * BD_Class: Descreve toda a extrutura do banco de dados existente, e oferece funções de suporte para outras classes, como: busca, inserção  e exclusão de dados.
-
-
-
