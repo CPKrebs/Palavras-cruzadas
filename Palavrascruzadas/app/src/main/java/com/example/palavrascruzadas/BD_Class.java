@@ -24,8 +24,6 @@ public class BD_Class extends SQLiteOpenHelper {
     private static final String LV7 = "lv7", LV8 = "lv8", LV9 = "lv9";
     private static final String LV10 = "lv10", LV11 = "lv11", LV12 = "lv12";
 
-    private String[] LEVEL_AUX = { LV1, LV2, LV3, LV4, LV5, LV6, LV7, LV8, LV9, LV10, LV11, LV12 };
-
     private static final String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + " (" + UID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                                                 LOGIN + " VARCHAR(255) ," + EMAIL + " VARCHAR(255) ," +SENHA + " VARCHAR(255) ," +
                                                 LV1 + " INTEGER ,"  + LV2 + " INTEGER ," + LV3 + " INTEGER ," +
@@ -34,6 +32,9 @@ public class BD_Class extends SQLiteOpenHelper {
                                                 LV10 + " INTEGER ," + LV11 + " INTEGER ," + LV12 + " INTEGER );";
 
     private static final String DROP_TABLE = "DROP TABLE IF EXISTS " + TABLE_NAME;
+
+    private String[] LEVEL_AUX = { LV1, LV2, LV3, LV4, LV5, LV6, LV7, LV8, LV9, LV10, LV11, LV12 };
+
     private Context context;
 
     SQLiteDatabase db;
@@ -200,7 +201,7 @@ public class BD_Class extends SQLiteOpenHelper {
         LIST
 
      ********************/
-    public ArrayList<BD_Class_AUX> LIST_PROJ() {
+    public ArrayList<BD_Class_AUX> LIST_USER() {
 
         db = this.getReadableDatabase();
         ArrayList<BD_Class_AUX> List = new ArrayList<BD_Class_AUX>();

@@ -9,14 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".Tela_Regras"
-            android:label="@string/title_activity_tela__regras"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Tela_Regras" />
         <activity android:name=".Tela_Menu" />
         <activity android:name=".Tela_Cadastro" />
         <activity android:name=".Tela_Jogo" />
-        <activity android:name=".Tela_Jogo_Aux" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

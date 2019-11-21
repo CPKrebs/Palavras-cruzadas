@@ -170,7 +170,7 @@ public class Tela_Menu extends AppCompatActivity {
             }
         });
 
-        ArrayList = helper.LIST_PROJ();
+        ArrayList = helper.LIST_USER();
         Adapter = new CustomAdapter( Tela_Menu.this, ArrayList);
         lv.setAdapter(Adapter);
 
@@ -271,7 +271,6 @@ public class Tela_Menu extends AppCompatActivity {
                         .setCancelable(false)
                         .setNegativeButton("Voltar",new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
-
                                 return;
                             }
                         })
@@ -303,7 +302,6 @@ public class Tela_Menu extends AppCompatActivity {
                 it = new Intent( Tela_Menu.this, Tela_Regras.class);
                 it.putExtra("Login", Login);
                 startActivity(it);
-
                 return true;
 
             case R.id.itemSAIR:

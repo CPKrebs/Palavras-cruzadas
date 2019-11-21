@@ -19,7 +19,6 @@ public class CustomAdapter extends BaseAdapter {
         this.ArrayList = ArrayList;
     }
 
-
     @Override
     public int getCount() {
         return ArrayList.size();
@@ -49,7 +48,6 @@ public class CustomAdapter extends BaseAdapter {
             holder.Email = (TextView) convertView.findViewById(R.id.txt2);
             holder.Ponto = (TextView) convertView.findViewById(R.id.txt3);
 
-
             convertView.setTag(holder);
         }else {
             holder = (Holder)convertView.getTag();
@@ -60,11 +58,9 @@ public class CustomAdapter extends BaseAdapter {
         holder.Ponto.setText("Pontos: "+ArrayList.get(position).getPONTO());
 
         return convertView;
-
     }
 
     public class Holder {
-
         TextView Login, Email, Ponto;
     }
 }
