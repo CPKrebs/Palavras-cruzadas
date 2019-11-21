@@ -16,7 +16,7 @@ A seguir um resumo das Classes e Layout mais importantes para o projeto.
 
 * activity_main: Primeira layout visível para o usuário, permite o login.
 * activity_tela__jogo: Exibe uma matriz 9x6 referente ao campo da fase, e as 12 letras que podem ser usadas na fase. Alem de um cronometro. 
-* activity_tela__menu: Exibe os níveis disponíveis, e a pontuação de todos os usuários cadastrados.
+* activity_tela__menu: Exibe os níveis disponíveis, o menu de opções, e a pontuação de todos os usuários cadastrados.
 * activity_tela__cadastro: Responsável por realizar o cadastro de um novo usuário.
 
 ### Classes Java
